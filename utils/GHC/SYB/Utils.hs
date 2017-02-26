@@ -176,17 +176,18 @@ module GHC.SYB.Utils where
 import Data.Generics
 
 -- import qualified GHC.Paths
-import PprTyThing()
-import DynFlags
-import GHC hiding (moduleName)
-import Outputable hiding (space)
-import SrcLoc()
-import qualified OccName(occNameString)
-import Bag(Bag,bagToList)
-import Var(Var)
-import FastString(FastString)
+import ETA.Main.PprTyThing()
+import ETA.Main.DynFlags
+import ETA.Main.GHC hiding (moduleName)
+import qualified ETA.Main.GHC as GHC
+import ETA.Utils.Outputable hiding (space)
+import ETA.BasicTypes.SrcLoc()
+import qualified ETA.BasicTypes.OccName as OccName (occNameString)
+import ETA.Utils.Bag(Bag,bagToList)
+import ETA.BasicTypes.Var(Var)
+import ETA.Utils.FastString(FastString)
 #if __GLASGOW_HASKELL__ >= 709
-import NameSet(NameSet,nameSetElems)
+import ETA.BasicTypes.NameSet(NameSet,nameSetElems)
 #else
 import NameSet(NameSet,nameSetToList)
 #endif

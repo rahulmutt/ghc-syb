@@ -20,7 +20,7 @@ library
 
   if impl(ghc >= 7.0)
     build-depends:
-      ghc
+      eta
   else
     build-depends:
       ghc >= 6.10,
